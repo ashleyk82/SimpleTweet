@@ -1,5 +1,6 @@
 package com.codepath.apps.restclienttemplate.models;
 
+import com.codepath.apps.restclienttemplate.TimeFormatter;
 import com.facebook.stetho.inspector.jsonrpc.JsonRpcException;
 
 import org.json.JSONArray;
@@ -24,6 +25,10 @@ public class Tweet {
         tweet.id = jsonObject.getLong("id");
 
         return tweet;
+    }
+
+    public String getFormattedTimestamp(){
+        return TimeFormatter.getTimeStamp(createdAt);
     }
 
     public static List<Tweet> fromJsonArray(JSONArray jsonArray) throws JSONException {
