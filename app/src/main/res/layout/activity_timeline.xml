@@ -12,7 +12,6 @@
         android:layout_height="match_parent"
         android:id="@+id/swipeContainer">
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTweets"
         android:layout_width="match_parent"
@@ -23,6 +22,15 @@
         android:listSelector= "@drawable/selector_list"
         android:layout_marginStart="0dp"
         android:layout_marginTop="0dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@android:drawable/ic_menu_edit"
+            app:layout_anchor="@id/rvTweets"
+            app:layout_anchorGravity="bottom|right|end" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 

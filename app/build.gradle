@@ -44,6 +44,7 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: '*.jar')
     implementation 'com.codepath.libraries:android-oauth-handler:2.4.0'
+    implementation "com.google.android.material:material:1.1.0"
     implementation 'commons-codec:commons-codec:1.10'
     implementation 'androidx.appcompat:appcompat:1.3.0'
     // Glide for remote image loading
@@ -51,9 +52,11 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     // Room for simple persistence with an ORM
-    def room_version = "2.3.0"
+    def room_version = "2.1.0"
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
     implementation 'com.facebook.stetho:stetho:1.5.1'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    implementation 'org.parceler:parceler-api:1.1.12'
+    annotationProcessor 'org.parceler:parceler:1.1.12'
 }
